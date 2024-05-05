@@ -15,8 +15,14 @@ import { EmailPipe } from '../email.pipe';
 export class ListarTransacoesComponent {
   // ISSO É INTERPOLAÇÃO DE VARIAVEIS
   public nome = 'Wanderson';
+  public sobrenome = 'Santos'
+
+  public boasVindas(){
+    return `Olá ${this.nome} ${this.sobrenome}, seja bem vindo!`;
+  }
+
   public titulo = 'Controle financeiro';
-  public boasVindas = 'Olá ' + this.nome + ", Bem vindo(a) ao nosso sistema!";
+
 
   // ISSO É UMA INTERPOLAÇÃO USANDO RETORNO DE UMA FUNÇÃO
   public receitas = 2000;
@@ -27,8 +33,7 @@ export class ListarTransacoesComponent {
   }
 
   public tipoSaldo() {
-    let diferenca = this.receitas - this.despesas;
-    let classSaldo = diferenca > 0 ? 'saldo-positivo' : 'saldo-negativo'
+    let classSaldo = this.saldo() > 0 ? 'saldo-positivo' : 'saldo-negativo'
     return classSaldo;
   }
 

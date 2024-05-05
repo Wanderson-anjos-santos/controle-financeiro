@@ -4,11 +4,11 @@
     <p>{{ date | data: 'dd/MM/yyyy HH:mm'}}</p>
   </header>
   <main>
-    <p class="boas-vindas">{{ boasVindas | lowercase}}</p>
+    <p>{{ boasVindas() }}</p>
     <p>{{ usuario | email}}</p>
     <h2>Lista de Transações</h2>
     <a routerLink="/adicionar">Adicionar Transações</a>
-    <p [class]="tipoSaldo()">Seu saldo atual é de: {{ saldo() | currency}}</p>
+    <p [class]="tipoSaldo()">Seu saldo atual é de: {{ saldo() }}</p>
     <table>
       <thead>
         <td>Cabeçalho da Tabela</td>
