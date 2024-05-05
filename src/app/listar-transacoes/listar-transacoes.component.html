@@ -3,9 +3,10 @@
         <h1>{{titulo}}</h1>
     </header>
     <main>
-        <p class="boas-vindas">{{boasVindas}}</p>
+        <p class="boas-vindas">{{ boasVindas }}</p>
         <h2>Lista de Transações</h2>
         <a routerLink="/adicionar">Adicionar Transações</a>
+        <p>Seu saldo atual é de: {{ saldo() }}</p>
       <table>
           <thead>
               <td>Cabeçalho da Tabela</td>

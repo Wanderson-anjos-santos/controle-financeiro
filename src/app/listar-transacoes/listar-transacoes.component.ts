@@ -8,7 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './listar-transacoes.component.scss'
 })
 export class ListarTransacoesComponent {
-  public nome= 'Wanderson';
-  public titulo= 'Controle financeiro';
-  public boasVindas= 'Olá ' + this.nome + ", Bem vindo(a) ao nosso sistema!";
+  // ISSO É INTERPOLAÇÃO DE VARIAVEIS
+  public nome = 'Wanderson';
+  public titulo = 'Controle financeiro';
+  public boasVindas = 'Olá ' + this.nome + ", Bem vindo(a) ao nosso sistema!";
+
+  // ISSO É UMA INTERPOLAÇÃO USANDO RETORNO DE UMA FUNÇÃO
+  public receitas = 2000;
+  public despesas = 500;
+
+  public saldo(){
+    return this.receitas - this.despesas
+  }
 }
