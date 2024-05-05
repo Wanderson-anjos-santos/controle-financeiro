@@ -1,13 +1,27 @@
-.container{
+.container {
   width: 800px;
   margin: auto;
-  header{
+
+  header {
     width: 100%;
     height: 80px;
     background-color: red;
-    h1{
+
+    h1 {
       color: white;
       text-align: center;
+    }
+  }
+
+  main {
+    .saldo-positivo {
+      color: white;
+      background-color: green;
+    }
+
+    .saldo-negativo {
+      color: white;
+      background-color: red;
     }
   }
 }

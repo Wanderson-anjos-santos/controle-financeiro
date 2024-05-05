@@ -17,7 +17,10 @@ export class ListarTransacoesComponent {
   public receitas = 2000;
   public despesas = 500;
 
-  public saldo(){
+  // ISSO É UM PROPERTY BINDING
+  public valorSaldo = 'saldo-negativo';
+
+  public saldo() {
     return this.receitas - this.despesas
   }
 }

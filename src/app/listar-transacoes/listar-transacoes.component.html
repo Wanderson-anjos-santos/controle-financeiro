@@ -1,21 +1,21 @@
 <div class="container">
-    <header>
-        <h1>{{titulo}}</h1>
-    </header>
-    <main>
-        <p class="boas-vindas">{{ boasVindas }}</p>
-        <h2>Lista de Transações</h2>
-        <a routerLink="/adicionar">Adicionar Transações</a>
-        <p>Seu saldo atual é de: {{ saldo() }}</p>
-      <table>
-          <thead>
-              <td>Cabeçalho da Tabela</td>
-          </thead>
-          <tbody>
-              <tr>
-                <td>Conteúdo da Tabela</td>
-              </tr>
-          </tbody>
-      </table>
-    </main>
+  <header>
+    <h1>{{ titulo }}</h1>
+  </header>
+  <main>
+    <p class="boas-vindas">{{ boasVindas }}</p>
+    <h2>Lista de Transações</h2>
+    <a routerLink="/adicionar">Adicionar Transações</a>
+    <p [class]="valorSaldo">Seu saldo atual é de: {{ saldo() }}</p>
+    <table>
+      <thead>
+        <td>Cabeçalho da Tabela</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Conteúdo da Tabela</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
 </div>
