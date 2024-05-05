@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { CurrencyPipe } from '../currency.pipe';
 
 @Component({
   selector: 'app-listar-transacoes',
   standalone: true,
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './listar-transacoes.component.html',
   styleUrl: './listar-transacoes.component.scss'
 })
