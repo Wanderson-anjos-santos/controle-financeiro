@@ -18,5 +18,5 @@ export class AdicionarTransacaoComponent {
 
   // 2WAY BINDING
   public nomeCompleto!: string;
-
+  public endereco!: string;
 }
