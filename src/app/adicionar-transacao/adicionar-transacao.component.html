@@ -1,6 +1,7 @@
-<input type="text" placeholder="Descrição">
-<input type="number" placeholder="Valor">
-<input type="date" placeholder="Data">
+<input type="text" [(ngModel)] = "nomeCompleto"/>
+<p>{{ nomeCompleto }}</p>
+<input type="number" placeholder="Valor" />
+<input type="date" placeholder="Data" />
 <button (click)="adicionarTransacao()">Adicionar transação</button>
 
 <p>{{ transacaoAdicionada }}</p>
