@@ -45,7 +45,7 @@ export class ListarTransacoesComponent {
   }
 
   public date = new Date();
-  public usuario = 'Wanderson.Santos';
+  public usuario = 'roosevelt.Santos';
 
   // LISTA DE TRANSAÇÕES
   public transacoes = [

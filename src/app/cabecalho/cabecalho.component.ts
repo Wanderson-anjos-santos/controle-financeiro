@@ -10,5 +10,5 @@ import { EmailPipe } from '../email.pipe';
 })
 export class CabecalhoComponent {
   public titulo = 'Controle Financeiro';
-  public usuario = 'Wanderson.Santos';
+  public usuario = 'roosevelt.Santos';
 }

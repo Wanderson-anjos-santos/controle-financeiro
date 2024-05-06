@@ -1,6 +1,25 @@
-<input type="number" [(ngModel)]="valorTransacao" placeholder="Valor" />
-<p>{{ valorTransacao }}</p>
-<input type="date" placeholder="Data" />
-<button (click)="adicionarTransacao()">Adicionar transação</button>
+<main class="container">
+    <h1>Adicionar Transações</h1>
+    <form #transacao="ngForm" (ngSubmit)="adicionarTransacao">
+        <div class="form-group">
+            <label for="nome">Descrição da Transação</label>
+            <input type="text" class="form-control" id="nome" name="nome" ngModel required placeholder="Descreva em poucas palavras sobre a transação">
+        </div>
+        <div class="form-group">
+            <label for="tipo">Tipo da Transação</label>
+            <select class="form-control" name="tipo" id="tipo" ngModel required>
+              <option value="receita">receita/Recebimento</option>
+              <option value="despesa">Despesa/Pagamento</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="valor">Valor da Transação</label>
+            <input type="number" class="form-control" id="valor" name="valor" ngModel required placeholder="Digite somente números e separe os centavos com ponto">
+        </div>
+        <button type="submit" class="btn btn-primary">Adicionar Transação</button>
+        <a class="btn btn-secondary" routerLink="/">Cancelar</a>
+        <p>{{ transacaoAdicionada }}</p>
+    </form>
+</main>
 
 <p>{{ transacaoAdicionada }}</p>
