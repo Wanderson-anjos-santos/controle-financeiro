@@ -46,11 +46,42 @@ export class ListarTransacoesComponent {
   public date = new Date();
   public usuario = 'Wanderson.Santos';
 
-  public nomeTransacao = 'Pagamento Aluguel';
-  public tipoTransacao = 'despesa';
-  public valorTransacao = 5000;
-  public dataTransacao = new Date();
-
   // LISTA DE TRANSAÇÕES
-  public transacoes = [];
+  public transacoes = [
+    {
+      'id': 1,
+      'nome': 'Recebimento de Salário',
+      'tipo': 'receita',
+      'valor': 8000,
+      'data': new Date()
+    },
+    {
+      'id': 2,
+      'nome': 'Pagamento de Aluguel',
+      'tipo': 'despesa',
+      'valor': 2000,
+      'data': new Date()
+    },
+    {
+      'id': 3,
+      'nome': 'Conta de Luz',
+      'tipo': 'despesa',
+      'valor': 200,
+      'data': new Date()
+    },
+    {
+      'id': 4,
+      'nome': 'Conta de Internet',
+      'tipo': 'despesa',
+      'valor': 120,
+      'data': new Date()
+    },
+    {
+      'id': 5,
+      'nome': 'Recebimento de Horas Extras',
+      'tipo': 'receita',
+      'valor': 300,
+      'data': new Date()
+    }
+  ];
 }
