@@ -21,8 +21,8 @@ import { EmailPipe } from '../email.pipe';
 })
 export class ListarTransacoesComponent {
   // ISSO É INTERPOLAÇÃO DE VARIAVEIS
-  public nome = 'Wanderson';
-  public sobrenome = 'Santos'
+  public nome = 'Roosevelt';
+  public sobrenome = 'Franklin'
 
   public boasVindas() {
     return `Olá ${this.nome} ${this.sobrenome}, seja bem vindo!`;

@@ -1,0 +1,60 @@
+{
+  "lista-transacoes":[
+    {
+      "id": "2374982365",
+      "descricao": "Recebimento de Salário",
+      "tipo": "receita",
+      "valor": 8000,
+      "data": "2024-05-06 09:00:00"
+    },
+    {
+      "id": "2092375079",
+      "descricao": "Pagamento de Aluguel",
+      "tipo": "despesa",
+      "valor": 2000,
+      "data": "2024-05-06 09:00:00"
+    },
+    {
+      "id": "3370837419",
+      "descricao": "Pagamento de Carro",
+      "tipo": "despesa",
+      "valor": 1500,
+      "data": "2024-05-06 09:00:00"
+    },
+    {
+      "id": "7378375873",
+      "descricao": "Seguro do Carro",
+      "tipo": "despesa",
+      "valor": 250,
+      "data": "2024-05-06 09:00:00"
+    },
+    {
+      "id": "9783483873",
+      "descricao": "Conta de Luz",
+      "tipo": "despesa",
+      "valor": 200,
+      "data": "2024-05-06 09:00:00"
+    },
+    {
+      "id": "9707478372",
+      "descricao": "Conta de Internet",
+      "tipo": "despesa",
+      "valor": 120,
+      "data": "2024-05-06 09:00:00"
+    },
+    {
+      "id": "9071237489",
+      "descricao": "Recebimento de Horas Extras",
+      "tipo": "receita",
+      "valor": 300,
+      "data": "2024-05-06 09:00:00"
+    },
+    {
+      "id": "1274734270",
+      "descricao": "Recebimento de Comissão",
+      "tipo": "receita",
+      "valor": 900,
+      "data": "2024-05-06 09:00:00"
+    }
+  ]
+}
