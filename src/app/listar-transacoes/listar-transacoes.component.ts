@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgStyle } from '@angular/common';
 import { NgIf } from '@angular/common';
 import { NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 import { CurrencyPipe } from '../currency.pipe';
 import { UppercasePipe } from '../uppercase.pipe';
@@ -14,7 +15,7 @@ import { EmailPipe } from '../email.pipe';
   standalone: true,
   imports: [
     CurrencyPipe, UppercasePipe, LowercasePipe, DataPipe,
-    EmailPipe, NgStyle, NgIf, NgFor],
+    EmailPipe, NgStyle, NgIf, NgFor, RouterLink],
   templateUrl: './listar-transacoes.component.html',
   styleUrl: './listar-transacoes.component.scss'
 })
@@ -27,7 +28,7 @@ export class ListarTransacoesComponent {
     return `Olá ${this.nome} ${this.sobrenome}, seja bem vindo!`;
   }
 
-  public titulo = 'Controle financeiro';
+  public titulo = 'Controle Financeiro';
 
 
   // ISSO É UMA INTERPOLAÇÃO USANDO RETORNO DE UMA FUNÇÃO
