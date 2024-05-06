@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { NgStyle } from '@angular/common';
+import { NgIf } from '@angular/common';
+import { NgFor } from '@angular/common';
+
 import { CurrencyPipe } from '../currency.pipe';
 import { UppercasePipe } from '../uppercase.pipe';
 import { LowercasePipe } from '../lowercase.pipe';
@@ -8,7 +12,9 @@ import { EmailPipe } from '../email.pipe';
 @Component({
   selector: 'app-listar-transacoes',
   standalone: true,
-  imports: [CurrencyPipe, UppercasePipe, LowercasePipe, DataPipe, EmailPipe],
+  imports: [
+    CurrencyPipe, UppercasePipe, LowercasePipe, DataPipe,
+    EmailPipe, NgStyle, NgIf, NgFor],
   templateUrl: './listar-transacoes.component.html',
   styleUrl: './listar-transacoes.component.scss'
 })
@@ -17,7 +23,7 @@ export class ListarTransacoesComponent {
   public nome = 'Wanderson';
   public sobrenome = 'Santos'
 
-  public boasVindas(){
+  public boasVindas() {
     return `Olá ${this.nome} ${this.sobrenome}, seja bem vindo!`;
   }
 
@@ -39,4 +45,12 @@ export class ListarTransacoesComponent {
 
   public date = new Date();
   public usuario = 'Wanderson.Santos';
+
+  public nomeTransacao = 'Pagamento Aluguel';
+  public tipoTransacao = 'despesa';
+  public valorTransacao = 5000;
+  public dataTransacao = new Date();
+
+  // LISTA DE TRANSAÇÕES
+  public transacoes = [];
 }

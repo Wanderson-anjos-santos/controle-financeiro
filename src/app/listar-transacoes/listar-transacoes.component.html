@@ -1,21 +1,34 @@
 <div class="container">
   <header>
-    <h1>{{ titulo | uppercase}}</h1>
-    <p>{{ date | data: 'dd/MM/yyyy HH:mm'}}</p>
+      <h1>{{ titulo | uppercase}}</h1>
+      <p>{{ date | data: 'dd/MM/yyyy HH:mm'}}</p>
   </header>
   <main>
     <p>{{ boasVindas() }}</p>
     <p>{{ usuario | email}}</p>
     <h2>Lista de Transações</h2>
     <a routerLink="/adicionar">Adicionar Transações</a>
-    <p [class]="tipoSaldo()">Seu saldo atual é de: {{ saldo() }}</p>
-    <table>
+    <p [class]="tipoSaldo()">Seu saldo atual é de: {{ saldo() | currency}}</p>
+    <p [ngStyle]="{'background': saldo() >0 ? 'green' : 'red'}">{{ saldo() | currency}}</p>
+
+    <table class="table">
       <thead>
-        <td>Cabeçalho da Tabela</td>
+        <tr>
+          <th scope="col">Nome Transação</th>
+          <th scope="col">Tipo Transação</th>
+          <th scope="col">Valor</th>
+          <th scope="col">Data</th>
+        </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Conteúdo da Tabela</td>
+        <tr [ngStyle]="{'background-color': tipoTransacao === 'despesa' ? 'red' : 'lightgreen'}">
+          <td>{{ nomeTransacao }}</td>
+          <td>
+            <span *ngIf="tipoTransacao === 'despesa'">😭</span>
+                {{ tipoTransacao }}
+          </td>
+          <td>{{ valorTransacao | currency}}</td>
+          <td>{{ dataTransacao | data: 'dd/MM/yyyy'}}</td>
         </tr>
       </tbody>
     </table>
