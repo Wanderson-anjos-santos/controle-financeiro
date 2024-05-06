@@ -34,6 +34,9 @@
             <td [ngStyle]="{'color': transacao.tipo === 'despesa' ? 'red' : 'green'}">
               {{ transacao.valor | currency }}</td>
             <td>{{ transacao.data | data: 'dd/MM/yyyy' }}</td>
+            <td>
+              <button class="btn btn-danger" (click)="excluirTransacao(transacao.id)">Excluir</button>
+            </td>
         </tr>
       </tbody>
     </table>
